@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fb1afc7e45e30fc4aaa8a4e327df4d7f
+timeCreated: 1525801892
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - matUICurrent: {fileID: 2100000, guid: fa3073c697b851a49816fd90d07594bc, type: 2}
+  - matDefault: {fileID: 2100000, guid: 26029228ebec5aa42951d4ecdef96abe, type: 2}
+  - matTinted: {fileID: 2100000, guid: 7656d97b0b425da4fa82d5242c7a6976, type: 2}
+  - uiPanel: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

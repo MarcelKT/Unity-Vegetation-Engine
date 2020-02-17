@@ -1,0 +1,86 @@
+# 3ds Max Wavefront OBJ Exporter v0.94b - (c)2007 guruware
+# File Created: 06.06.2017 09:18:53
+
+newmtl bark
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7098 0.5961 0.5608
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\New folder 2\RosaBark.jpg
+	map_Kd D:\New folder 2\RosaBark.jpg
+	map_bump -bm 0.3000 D:\New folder 2\RosaBark.jpg
+	bump -bm 0.3000 D:\New folder 2\RosaBark.jpg
+
+newmtl leaf
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8157 0.9059 0.7686
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\New folder 2\Rosaleaf.jpg
+	map_Kd D:\New folder 2\Rosaleaf.jpg
+	map_d D:\New folder 2\Rolea-op.jpg
+	map_bump -bm 0.3000 D:\New folder 2\Rosaleaf.jpg
+	bump -bm 0.3000 D:\New folder 2\Rosaleaf.jpg
+
+newmtl flower
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9451 0.7725 0.4078
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\New folder 2\Rosa_san.jpg
+	map_Kd D:\New folder 2\Rosa_san.jpg
+	map_d D:\New folder 2\Rosa OP.jpg
+	map_bump -bm 0.3000 D:\New folder 2\Rosa_san.jpg
+	bump -bm 0.3000 D:\New folder 2\Rosa_san.jpg
+
+newmtl base
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8588 0.5569 0.4078
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\New folder 2\Ros-base .jpg
+	map_Kd D:\New folder 2\Ros-base .jpg
+	map_d D:\New folder 2\base_OP.jpg
+	map_bump D:\New folder 2\Ros-base .jpg
+	bump D:\New folder 2\Ros-base .jpg
+
+newmtl green
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5216 0.7216 0.5294
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\New folder 2\Rosa_bud.jpg
+	map_Kd D:\New folder 2\Rosa_bud.jpg
+	map_d D:\New folder 2\Robud_OP.jpg
+	map_bump -bm 0.3000 D:\New folder 2\Rosa_bud.jpg
+	bump -bm 0.3000 D:\New folder 2\Rosa_bud.jpg
