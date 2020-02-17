@@ -6,6 +6,7 @@ https://drive.google.com/open?id=14DIWcwKU2GMoWCR58K8jS76iLD8EC1al
 
 
 Features:
+
 Vegetation Spawner:
 	Shows off the basics of the vegetation spawner.
 	Can create plants in sets of 3 heights (low foliage, medium foliage, tall foliage).
@@ -39,3 +40,15 @@ Heirarchal Bounding Grids:
 	Furthermore, checking if objects lie within a bounding shape (for collision, for example) is as simple as flooring the object's 3D position and
 	multiplying it by the grid size, then extracting which other elements fall within that grid.
 	Ideally, a grid would be sized such that any object would at most intersect 3 grid elements if positioned in a 3D corner.
+
+Brush Indicator (Unreal Engine 4 port video):
+	A fun new user-friendly approach to terrain brushes
+	Size of outer circle = brush size
+	Size of inner circle = brush strength
+		Lowest strength when the inner circle is just around the inner point
+		Half strength at when the inner circle is halfway between the outer circle and inner point
+		Full strength at when the inner circle is just below the outer circle
+		The inner circle doesn't quite overlap with the inner point or outer circle,
+		doing so may make it unclear to the user whether the inner circle is in the middle or the rim
+		The inner circle is sharp on the outside at max strength, and sharp on the inside at lowest strength
+		This just makes it clearer, and is a nice visual
