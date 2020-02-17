@@ -42,7 +42,7 @@ Heirarchal Bounding Grids:
   * The grid supports dynamic scaling. The developer can enter:
     * Any grid size
     * Any grid depth (the grid is hierarchal). By default, a depth of 3 is used - a 2x2x2 grid, with a 3x3x3 grid inside it, and another 3x3x3 grid inside each. Any grid element count (for example, 3x3x3) at each depth.
-  * AI is calculated on a grid element level - the global axis is never used alone.
+  * AI can be calculated on a grid element level - the global axis is never used alone.
   * Instead, animals check the grid element they're assigned to first, and their neighbours if they need to.
 * This saves having to manually create bounding spheres/boxes for major land features, as these are created automatically.
 * Furthermore, checking if objects lie within a bounding shape (for collision, for example) is as simple as flooring the object's 3D position and multiplying it by the grid size, then extracting which other elements fall within that grid.
