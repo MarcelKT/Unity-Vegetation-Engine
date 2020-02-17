@@ -4,6 +4,8 @@ First iteration of the grid optimiser - this was eventually going to become a wh
 
 I was going to add plant spreading, but I decided to first move the project to Unreal Engine IV (I missed the depth of C++ I could use for the grid and I generally prefer the environment provided there). I'll add that if I recover the files.
 
+Progress (descriptions of what these demonstrate are at the end of the file):
+
 Hierarchal Bounding Grids Demo:
 
 [![Hierarchal Bounding Grids Demo Video](https://img.youtube.com/vi/cLpGdPiAZaE/0.jpg)](https://www.youtube.com/watch?v=cLpGdPiAZaE)
@@ -15,3 +17,44 @@ Vegetation Painter Demo:
 Brush Indicator Demo (From Unreal Engine 4 Port):
 
 [![Brush Indicator Demo Video](https://img.youtube.com/vi/3S-tfpVBtb8/0.jpg)](https://www.youtube.com/watch?v=3S-tfpVBtb8)
+
+Vegetation Spawner:
+* Shows off the basics of the vegetation spawner.
+* Can create plants in sets of 3 heights (low foliage, medium foliage, tall foliage).
+* Can remove plants in those same 3 sets.
+  * Can create all 3 at once, then remove just low foliage.
+* Plants can be places automatically in microbiome-like structures.
+  * Based on Perlin noise.
+  * Creates more natural variety in a forest.
+* Plants can be placed and removed in different intensities (orange painter).
+  * Can place a dense forest, and then clear it so it closer resembles a forest eve.
+  * Can create clearings, lighter forests, or forests with more/less low foliage.
+  * Powerful tool for quick enclosure design.
+
+Heirarchal Bounding Grids:
+* Shows of the GUI for selecting tree height (the previous demo used number keys to select foliage)
+* An interconnected grid for animal-plant interaction.
+* Axis-aligned grid.
+  * The grid instances are stored in an array.
+  * The array-position of every grid element can easily be calculated from the position of the grid in the world.
+  * All grid elements are connected to their 8 neighbours - If an animal "smell" or "sight" range goes over one grid, the position of other overlapped grid elements need not be derived as it is a neighbour of the current element.
+  * Similarly, trees spreading seeds around them don't have to re-derive the grid element of where the seeds land - just need to check grid element neighbours.
+  * The grid supports dynamic scaling. The developer can enter:
+    * Any grid size
+    * Any grid depth (the grid is hierarchal). By default, a depth of 3 is used - a 2x2x2 grid, with a 3x3x3 grid inside it, and another 3x3x3 grid inside each. Any grid element count (for example, 3x3x3) at each depth.
+  * AI is calculated on a grid element level - the global axis is never used alone.
+  * Instead, animals check the grid element they're assigned to first, and their neighbours if they need to.
+* This saves having to manually create bounding spheres/boxes for major land features, as these are created automatically.
+* Furthermore, checking if objects lie within a bounding shape (for collision, for example) is as simple as flooring the object's 3D position and multiplying it by the grid size, then extracting which other elements fall within that grid.
+* Ideally, a grid would be sized such that any object would at most intersect 3 grid elements if positioned in a 3D corner.
+
+Brush Indicator (Unreal Engine 4 port video):
+* A fun new user-friendly approach to terrain brushes
+* Size of outer circle = brush size
+* Size of inner circle = brush strength
+  * Lowest strength when the inner circle is just around the inner point
+  * Half strength at when the inner circle is halfway between the outer circle and inner point
+  * Full strength at when the inner circle is just below the outer circle
+  * The inner circle doesn't quite overlap with the inner point or outer circle, doing so may make it unclear to the user whether the inner circle is in the middle or the rim
+  * The inner circle is sharp on the outside at max strength, and sharp on the inside at lowest strength
+  * This just makes it clearer, and is a nice visual
